@@ -25,3 +25,6 @@ entry_points:
       min_price: float
       max_price: float
     command: "pytest src/data_check/test_data.py -vv --csv {input_artifact} --ref {reference_artifact} --kl_threshold {kl_threshold} --min_price {min_price} --max_price {max_price}"
+
+  train_random_forest:
+    command: "python src/train_random_forest/run.py"
