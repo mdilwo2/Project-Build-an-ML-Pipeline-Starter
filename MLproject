@@ -16,3 +16,12 @@ entry_points:
         default: ''
 
     command: "python main.py main.steps=\\'{steps}\\' $(echo {hydra_options})"
+
+  data_check:
+    parameters:
+      input_artifact: str
+      reference_artifact: str
+      kl_threshold: float
+      min_price: float
+      max_price: float
+    command: "pytest src/data_check/test_data.py -vv --csv {input_artifact} --ref {reference_artifact} --kl_threshold {kl_threshold} --min_price {min_price} --max_price {max_price}"

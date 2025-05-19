@@ -5,7 +5,7 @@ import scipy.stats
 
 def test_column_names(data):
 
-    expected_colums = [
+    expected_columns = [
         "id",
         "name",
         "host_id",
@@ -62,4 +62,18 @@ def test_similar_neigh_distrib(data: pd.DataFrame, ref_data: pd.DataFrame, kl_th
 
 ########################################################
 # Implement here test_row_count and test_price_range   #
+@pytest.fixture
+def data():
+    return pd.read_csv("sample.csv")  # Ensure correct filename
+
+def test_row_count(data):
+    assert 15000 < data.shape[0] < 1000000
+
+@pytest.fixture
+def price_limits():
+    return {"min_price": 10, "max_price": 350}
+
+def test_price_range(data, price_limits):
+    assert data['price'].between(price_limits["min_price"], price_limits["max_price"]).all()
+
 ########################################################
