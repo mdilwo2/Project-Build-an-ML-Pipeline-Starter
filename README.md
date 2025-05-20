@@ -179,6 +179,6 @@ Please, make sure all steps are using **the same** python version and that you h
 
 [License](LICENSE.txt)
 
-### Link to completed project
+### Link to Completed Project
 
-https://wandb.ai/mdilwo2/projects
+https://github.com/mdilwo2/Project-Build-an-ML-Pipeline-Starter/tree/main
