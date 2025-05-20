@@ -182,3 +182,4 @@ Please, make sure all steps are using **the same** python version and that you h
 ### Link to Completed Project
 
 https://github.com/mdilwo2/Project-Build-an-ML-Pipeline-Starter/tree/main
+https://wandb.ai/mdilwo2/projects
